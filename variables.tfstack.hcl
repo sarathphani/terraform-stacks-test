@@ -7,9 +7,7 @@ variable "identity_token" {
   ephemeral = true
 }
 
-variable "role_arn" {
-  type = string
-}
+
 
 variable "default_tags" {
   description = "A map of default tags to apply to all AWS resources"
