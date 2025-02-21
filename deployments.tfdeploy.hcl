@@ -1,12 +1,14 @@
-identity_token "aws" {
-  audience = ["aws.workload.identity"]
+store "varset" "tokens" {
+  id = "varset-uK6b5weP8acZwnpD"
+  category = "env"
 }
 
 deployment "development" {
   inputs = {
     regions        = ["ap-southeast-2"]
-    role_arn       = "arn:aws:iam::320983814425:role/wbc-t1deploy"
-    identity_token = identity_token.aws.jwt
+    access_key = store.varset.tokens.AWS_ACCESS_KEY_ID    
+    secret_key = store.varset.tokens.AWS_SECRET_ACCESS_KEY
+    session_token = store.varset.tokens.AWS_SESSION_TOKEN
     default_tags   = { stacks-preview-example = "test-s3-tag" }
   }
 }
@@ -14,8 +16,9 @@ deployment "development" {
 deployment "production" {
   inputs = {
     regions        = ["ap-southeast-2"]
-    role_arn       = "arn:aws:iam::320983814425:role/wbc-t1deploy"
-    identity_token = identity_token.aws.jwt
-    default_tags   = { stacks-preview-example = "prod-s3-tag" }
+    access_key = store.varset.tokens.AWS_ACCESS_KEY_ID    
+    secret_key = store.varset.tokens.AWS_SECRET_ACCESS_KEY
+    session_token = store.varset.tokens.AWS_SESSION_TOKEN
+    default_tags   = { stacks-preview-example = "test-s3-tag" }
   }
 }
