@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "lambda_bucket" {
-  bucket = "test-bucket"
+  bucket = "test-bucketstacks-9977"
 }
 
 resource "aws_s3_bucket_ownership_controls" "bucket_controls" {
