@@ -28,7 +28,4 @@ provider "aws" "configurations" {
   for_each = var.regions
 
 
-    default_tags {
-      tags = var.default_tags
-    }
 }
