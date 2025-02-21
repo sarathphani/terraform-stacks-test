@@ -2,7 +2,7 @@ store "varset" "tokens" {
   id = "varset-uK6b5weP8acZwnpD"
   category = "terraform"
 }
-
+/*
 deployment "development" {
   inputs = {
     region        = "ap-southeast-2"
@@ -12,7 +12,7 @@ deployment "development" {
     default_tags   = { stacks-preview-example = "test-s3-tag" }
   }
 }
-
+*/
 deployment "production" {
   inputs = {
     region        = "ap-southeast-2"
