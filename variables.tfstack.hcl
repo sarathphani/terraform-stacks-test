@@ -1,5 +1,5 @@
 variable "regions" {
-  type = set(string)
+  type = string
   default = "ap-southeast-2"
 }
 

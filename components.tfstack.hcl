@@ -1,13 +1,11 @@
 component "s3" {
-  for_each = var.regions
-
   source = "./s3"
 
   inputs = {
-    region = each.value
+    region = var.region
   }
 
   providers = {
-    aws    = provider.aws.configurations[each.value]
+    aws    = provider.aws.configurations
   }
 }
