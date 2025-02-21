@@ -6,6 +6,7 @@ store "varset" "tokens" {
 deployment "development" {
   inputs = {
     regions        = ["ap-southeast-2"]
+    aws_region = "ap-southeast-2"
     access_key = store.varset.tokens.AWS_ACCESS_KEY_ID    
     secret_key = store.varset.tokens.AWS_SECRET_ACCESS_KEY
     session_token = store.varset.tokens.AWS_SESSION_TOKEN
@@ -16,6 +17,7 @@ deployment "development" {
 deployment "production" {
   inputs = {
     regions        = ["ap-southeast-2"]
+    aws_region = "ap-southeast-2"
     access_key = store.varset.tokens.AWS_ACCESS_KEY_ID    
     secret_key = store.varset.tokens.AWS_SECRET_ACCESS_KEY
     session_token = store.varset.tokens.AWS_SESSION_TOKEN
