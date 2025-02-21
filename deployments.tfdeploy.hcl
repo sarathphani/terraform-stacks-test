@@ -1,6 +1,6 @@
 store "varset" "tokens" {
   id = "varset-uK6b5weP8acZwnpD"
-  category = "env"
+  category = "terraform"
 }
 
 deployment "development" {
